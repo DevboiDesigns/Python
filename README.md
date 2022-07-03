@@ -152,8 +152,42 @@ print(universe)
 
 ## Tuples
 
+- can not modify
+
+* Example
+
+```py
+item = ('Health Kit', 4)
+name = item[0]
+print(name)
+# item[1] = 10 # Error : can not re assign
+item = ("Knife", 1)
+print(item)
+
+print(item.count('Knife'))
+print(item.index(1))
+```
+
+## Dictionaries
+
 - Example
 
 ```py
+inventory = {'Knife':1, 'Health Kit': 3, 'Wood': 5}
 
+print(inventory['Health Kit']) # 3
+inventory['Knife'] = 2
+print(inventory)
+
+inventory['Gold'] = 50 # will add key if doesnt excist {'Knife': 2, 'Health Kit': 3, 'Wood': 5, 'Gold': 50}
+print(inventory)
+
+print(inventory.get('Tim')) # none
+print(inventory.get('Knife')) # 2 value
+
+print(inventory.keys()) # dict_keys(['Knife', 'Health Kit', 'Wood', 'Gold'])
+print(inventory.values()) # dict_values([2, 3, 5, 50])
+
+popped_item = inventory.pop('Knife') # removes item
+print(popped_item) # 2 value
 ```
