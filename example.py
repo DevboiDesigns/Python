@@ -161,3 +161,36 @@ print(list(range(0, 10, 2))) # will skip (2) every other one (even)
  
 
  # -------------------------------------------------------- Control Flow
+
+ ## If Statements
+print('---------------- If Statements')
+
+key_press = 'd'
+if key_press == 'r':
+  print('Move right') # indent if statmetns
+elif key_press == 'l':
+  print('Move left')
+else: 
+  print('Invalid key')
+
+
+## Ternary 
+
+result = 'Move right' if key_press == 'r' else 'Move left'
+print(result)
+
+## Variants
+
+num_lives = 3
+health = 0
+if health <= 0 and num_lives <= 0:
+  # num_lives -= 1
+  # print('You lost a life!')
+  if num_lives <= 0:
+    print('You died!')
+elif health <= 10:
+  print('Warning: less than 10% health')
+elif health <= 50:
+  print('Warning: less than 50% health')
+else: 
+  print('Great!')

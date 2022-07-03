@@ -221,3 +221,53 @@ print(5 not in first_ten) # will check if in range : True
 print(list(range(1, 11, 2))) # will skip (2) every other one (odd)
 print(list(range(0, 10, 2))) # will skip (2) every other one (even)
 ```
+
+# Conditional Logic
+
+## if, elif, else
+
+- Example
+
+```py
+key_press = 'd'
+if key_press == 'r':
+  print('Move right') # indent if statmetns
+elif key_press == 'l':
+  print('Move left')
+else:
+  print('Invalid key')
+```
+
+## Ternary
+
+- Example
+
+```py
+result = 'Move right' if key_press == 'r' else 'Move left'
+```
+
+## Variants
+
+- Example
+
+```py
+num_lives = 3
+health = 0
+if health <= 0 and num_lives <= 0:
+  # num_lives -= 1
+  # print('You lost a life!')
+  if num_lives <= 0:
+    print('You died!')
+elif health <= 10:
+  print('Warning: less than 10% health')
+elif health <= 50:
+  print('Warning: less than 50% health')
+else:
+  print('Great!')
+```
+
+# Loops
+
+## while
+
+## for
