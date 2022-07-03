@@ -249,3 +249,34 @@ def move():
   print(x_pos)
 
 move()
+
+# default value 
+def dynamicMove(amount = 1):
+  global x_pos
+  x_pos += amount
+  print(x_pos)
+
+dynamicMove(5)
+dynamicMove(10)
+dynamicMove()
+
+start_pos = 0
+end_pos = 10
+x_pos = 0
+
+def moveAgain(x_pos, amount = 1):
+  global start_pos, end_pos
+  x_pos += amount
+  print('this is the x_pos: ' + str(x_pos)) # this is the x_pos: 11 (20)
+  if x_pos < start_pos:
+    return start_pos
+  elif x_pos > end_pos:
+    return end_pos
+  return x_pos # else is not needed because return will break from loop if condition is meet 
+  
+
+result = moveAgain(10) # 11
+print(result) # 11
+
+result = moveAgain(100, 10) # 20
+print(result) # 20
