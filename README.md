@@ -454,10 +454,43 @@ print(new_character.health)
 print(new_character.check_if_dead())
 ```
 
-# Static
+# Static properties
 
 - Example
 
 ```py
+class StaticProperties:
 
+  # Static
+  speed = 1.0
+
+  def __init__(self, name, life, pos):
+    self.name = name
+    self.life = life
+    self.pos = pos
+
+  def change_speed(to_speed):
+    StaticProperties.speed = to_speed
+
+
+
+pl_charac = StaticProperties('Lisa', 100, 1)
+pl_charac_two = StaticProperties('Susy', 100, 1)
+print(pl_charac.speed)
+print(pl_charac_two.speed)
+
+print(StaticProperties.speed)
+
+StaticProperties.speed = 2
+print(pl_charac.speed)
+print(pl_charac_two.speed)
+
+print(StaticProperties.speed)
+
+StaticProperties.change_speed(100)
+
+print(pl_charac.speed)
+print(pl_charac_two.speed)
+
+print(StaticProperties.speed)
 ```
