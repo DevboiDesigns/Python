@@ -194,3 +194,58 @@ elif health <= 50:
   print('Warning: less than 50% health')
 else: 
   print('Great!')
+
+
+
+# -------------------------------------------------------- Loops
+print('------------- Loops')
+ ## while
+
+x_pos = 0
+y_pos = 2
+end_pos = 5
+enemy_pos = 3
+while x_pos < end_pos:
+  x_pos += 1 
+  print(x_pos)
+  if y_pos > 1:
+    continue # will skip next if statement/ and contiue with iteration 
+  if x_pos == enemy_pos:
+    print("You collided with enemy")
+    break # will completely break out of loop
+print('Game Over')  
+
+## for
+print('-------------for Loops')
+
+our_range = range(1, 6)
+for i in our_range:
+  print(i) # 1 2 3 4 5 
+
+inventory = ['Boots', 'Arrows', 'Bow', 'Sword']
+for item in inventory:
+  print(item)
+  if item == 'Bow':
+    break
+
+
+# convert for to while
+i = 0
+while i < len(inventory):
+  print(inventory[i])
+  i += 1
+
+
+# -------------------------------------------------------- Functions
+print('------------- Functions')
+
+def name():
+  print('Code')
+
+x_pos = 0
+def move():
+  global x_pos # must assign global to get access to global variables 
+  x_pos += 1
+  print(x_pos)
+
+move()
