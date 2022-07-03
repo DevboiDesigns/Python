@@ -368,3 +368,96 @@ print(result) # 11
 result = moveAgain(100, 10) # 20
 print(result) # 20
 ```
+
+# Classes & Objects
+
+- Custom Type
+
+## Class
+
+- Basic init
+
+```py
+class PlayerCharacter:
+  # Initializer/ Constructor
+  def __init__(self, name, x_pos, health):
+    self.name = name
+    self.x_pos = x_pos
+    self.health = health
+```
+
+- Methods
+
+```py
+class PlayerCharacter:
+  # Initializer/ Constructor
+  def __init__(self, name, x_pos, health):
+    self.name = name
+    self.x_pos = x_pos
+    self.health = health
+
+  def move(self, amount):
+    self.x_pos += amount
+
+  def take_damage(self, amount):
+    self.health -= amount
+    if self.health < 0:
+      self.health = 0
+
+  def check_if_dead(self): # returns Boolean
+    return self.health <= 0 # will return True if condition meet
+```
+
+## Object
+
+- Example
+
+```py
+player_character = PlayerCharacter('Devboi', 5, 100)
+print(player_character.name)
+other_character = PlayerCharacter('Tim', 10, 50)
+other_character.name = 'Skhlkj'
+print(other_character.name)
+
+player_character.move(3)
+print(player_character.x_pos)
+#player_character.health = 0
+player_character.take_damage(200)
+print(player_character.check_if_dead())
+```
+
+# Inheritance
+
+- Example
+
+```py
+class HeroCharacter(PlayerCharacter):
+  def __init__(self, name, x_pos, health, num_lives):
+    super().__init__(name, x_pos, health)
+    self.max_health = health
+    self.num_lives = num_lives
+
+    def take_damage(self, amount):
+      self.health -= amount
+    if self.health <= 0:
+      self.num_lives -= 1
+      self.health = self.max_health
+
+    def check_if_dead(self): # returns Boolean
+      return self.health <= 0 and self.num_lives <= 0
+
+
+
+new_character = HeroCharacter("harry", 10, 100, 5)
+new_character.take_damage(5)
+print(new_character.health)
+print(new_character.check_if_dead())
+```
+
+# Static
+
+- Example
+
+```py
+
+```
