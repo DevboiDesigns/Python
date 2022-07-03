@@ -136,3 +136,26 @@ print(inventory.values()) # dict_values([2, 3, 5, 50])
 
 popped_item = inventory.pop('Knife') # removes item
 print(popped_item) # 2 value
+
+# Ranges
+print('--------- Ranges')
+
+first_ten = range(10)
+print(first_ten[0]) # 0
+print(first_ten[9]) # 9
+
+first_ten = range(1, 11)
+print(first_ten[0]) # 1
+print(first_ten[9]) # 10
+
+reversed_ten = reversed(first_ten) # reverse list
+reversed_ten = list(reversed_ten) # convert to list
+print(reversed_ten) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+print(5 in first_ten) # will check if in range : True
+print(5 not in first_ten) # will check if in range : True
+
+# ----------- (start, stop, step)
+print(list(range(1, 11, 2))) # will skip (2) every other one (odd)
+print(list(range(0, 10, 2))) # will skip (2) every other one (even)
+ 

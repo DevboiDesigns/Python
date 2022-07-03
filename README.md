@@ -191,3 +191,16 @@ print(inventory.values()) # dict_values([2, 3, 5, 50])
 popped_item = inventory.pop('Knife') # removes item
 print(popped_item) # 2 value
 ```
+
+## Ranges
+
+- parameters: `(start, stop, step)`
+
+* `in`
+* `not in`
+
+- Example
+
+```py
+
+```
